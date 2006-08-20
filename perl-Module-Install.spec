@@ -24,8 +24,6 @@ BuildRequires:	perl-YAML >= 0.35
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-#%define         _noautoreq      'perl(inc::Module::Installddd)'
-
 %description
 Module::Install is a package for writing installers for CPAN (or
 CPAN-like) distributions that are clean, simple, minimalist, act in a
