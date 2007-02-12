@@ -6,7 +6,7 @@
 %define	pdir	Module
 %define	pnam	Install
 Summary:	Module::Install - Standalone, extensible Perl module installer
-Summary(pl.UTF-8):   Module::Install - samodzielny, rozszerzalny instalator modułów Perla
+Summary(pl.UTF-8):	Module::Install - samodzielny, rozszerzalny instalator modułów Perla
 Name:		perl-Module-Install
 Version:	0.63
 Release:	0.1
