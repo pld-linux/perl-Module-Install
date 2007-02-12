@@ -6,7 +6,7 @@
 %define	pdir	Module
 %define	pnam	Install
 Summary:	Module::Install - Standalone, extensible Perl module installer
-Summary(pl):	Module::Install - samodzielny, rozszerzalny instalator modu³ów Perla
+Summary(pl.UTF-8):   Module::Install - samodzielny, rozszerzalny instalator moduÅ‚Ã³w Perla
 Name:		perl-Module-Install
 Version:	0.63
 Release:	0.1
@@ -36,15 +36,15 @@ especially for first-time CPAN authors) to have installers that follow
 all the best practices for distribution installation, but involve as
 much DWIM (Do What I Mean) as possible when writing them.
 
-%description -l pl
+%description -l pl.UTF-8
 Module::Install to pakiet do pisania dla dystrybucji CPAN (lub
-podobnych) instalatorów, które bêd± przejrzyste, minimalistyczne i
-dzia³a³y ca³kowicie poprawnie z systemami budowania
-ExtUtils::MakeMaker i Module::Build, a tak¿e bêd± dzia³aæ na ka¿dej
+podobnych) instalatorÃ³w, ktÃ³re bÄ™dÄ… przejrzyste, minimalistyczne i
+dziaÅ‚aÅ‚y caÅ‚kowicie poprawnie z systemami budowania
+ExtUtils::MakeMaker i Module::Build, a takÅ¼e bÄ™dÄ… dziaÅ‚aÄ‡ na kaÅ¼dej
 instalacji Perla od wersji 5.004.
 
-Celem jest jak najwiêksze u³atwienie autorom CPAN (a szczególnie
-pocz±tkuj±cym autorom CPAN) posiadania instalatorów zachowuj±cych siê
+Celem jest jak najwiÄ™ksze uÅ‚atwienie autorom CPAN (a szczegÃ³lnie
+poczÄ…tkujÄ…cym autorom CPAN) posiadania instalatorÃ³w zachowujÄ…cych siÄ™
 jak najlepiej.
 
 %prep
