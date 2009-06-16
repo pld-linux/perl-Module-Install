@@ -8,23 +8,29 @@
 Summary:	Module::Install - Standalone, extensible Perl module installer
 Summary(pl.UTF-8):	Module::Install - samodzielny, rozszerzalny instalator modułów Perla
 Name:		perl-Module-Install
-Version:	0.77
+Version:	0.91
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/A/AD/ADAMK/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	1bcc0b4e673188e7b97f9f0b691954cf
+Source0:	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	5ac4cce8fcab544e8f313275daad800e
 URL:		http://search.cpan.org/dist/Module-Install/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-ExtUtils-Install >= 1.50
-BuildRequires:	perl-ExtUtils-ParseXS >= 2.19
-BuildRequires:	perl-File-Remove >= 1.40
-BuildRequires:	perl-Module-ScanDeps >= 0.83
-BuildRequires:	perl-PAR-Dist >= 0.29
-BuildRequires:	perl-YAML-Tiny >= 1.31
+BuildRequires:	perl(JSON) >= 2.14
+BuildRequires:	perl(Module::ScanDeps) >= 0.89
+BuildRequires:	perl(PAR::Dist) >= 0.29
+BuildRequires:	perl(Parse::CPAN::Meta) >= 1.39
+BuildRequires:	perl-Archive-Tar >= 1.44
+BuildRequires:	perl-Devel-PPPort >= 3.16
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.42
+BuildRequires:	perl-File-Remove >= 1.42
+BuildRequires:	perl-PathTools >= 3.2701
+BuildRequires:	perl-Test-Harness >= 3.13
+BuildRequires:	perl-Test-Simple >= 0.86
+BuildRequires:	perl-YAML-Tiny >= 1.38
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
