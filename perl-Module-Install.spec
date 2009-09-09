@@ -26,6 +26,7 @@ BuildRequires:	perl(Parse::CPAN::Meta) >= 1.39
 BuildRequires:	perl-Archive-Tar >= 1.44
 BuildRequires:	perl-Devel-PPPort >= 3.16
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.42
+BuildRequires:	perl-ExtUtils-ParseXS >= 2.19
 BuildRequires:	perl-File-Remove >= 1.42
 BuildRequires:	perl-PathTools >= 3.2701
 BuildRequires:	perl-Test-Harness >= 3.13
