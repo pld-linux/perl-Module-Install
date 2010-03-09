@@ -8,13 +8,13 @@
 Summary:	Module::Install - Standalone, extensible Perl module installer
 Summary(pl.UTF-8):	Module::Install - samodzielny, rozszerzalny instalator modułów Perla
 Name:		perl-Module-Install
-Version:	0.91
+Version:	0.94
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	5ac4cce8fcab544e8f313275daad800e
+# Source0-md5:	5a0a534f8c76b070674ef2be9b120d45
 URL:		http://search.cpan.org/dist/Module-Install/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
