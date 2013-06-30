@@ -8,30 +8,34 @@
 Summary:	Module::Install - Standalone, extensible Perl module installer
 Summary(pl.UTF-8):	Module::Install - samodzielny, rozszerzalny instalator modułów Perla
 Name:		perl-Module-Install
-Version:	1.04
+Version:	1.06
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	820564d32c26b90f5f6fedd5225df71d
+Source0:	http://www.cpan.org/modules/by-module/Module/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	720e9c700f261b88698ef013a2691d6d
 URL:		http://search.cpan.org/dist/Module-Install/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl(JSON) >= 2.14
-BuildRequires:	perl(Module::ScanDeps) >= 0.89
-BuildRequires:	perl(PAR::Dist) >= 0.29
-BuildRequires:	perl(Parse::CPAN::Meta) >= 1.39
 BuildRequires:	perl-Archive-Tar >= 1.44
 BuildRequires:	perl-Devel-PPPort >= 3.16
-BuildRequires:	perl-ExtUtils-MakeMaker >= 6.42
+BuildRequires:	perl-ExtUtils-Install >= 1.52
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.59
 BuildRequires:	perl-ExtUtils-ParseXS >= 2.19
 BuildRequires:	perl-File-Remove >= 1.42
-BuildRequires:	perl-PathTools >= 3.2701
+BuildRequires:	perl-JSON >= 2.14
+BuildRequires:	perl-Module-Build >= 0.29
+BuildRequires:	perl-Module-CoreList >= 2.17
+BuildRequires:	perl-Module-ScanDeps >= 0.89
+BuildRequires:	perl-PAR-Dist >= 0.29
+BuildRequires:	perl-Parse-CPAN-Meta >= 1.39
+BuildRequires:	perl-PathTools >= 3.28
 BuildRequires:	perl-Test-Harness >= 3.13
 BuildRequires:	perl-Test-Simple >= 0.86
 BuildRequires:	perl-YAML-Tiny >= 1.38
+BuildRequires:	perl-libwww >= 5.812
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -76,13 +80,21 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/Module/Install.pod
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorlib}/Module/*.pm
+%{perl_vendorlib}/Module/AutoInstall.pm
+%{perl_vendorlib}/Module/Install.pm
 %{perl_vendorlib}/Module/Install
-%{perl_vendorlib}/inc
-%{_mandir}/man3/*
+%dir %{perl_vendorlib}/inc
+%dir %{perl_vendorlib}/inc/Module
+%{perl_vendorlib}/inc/Module/Install.pm
+%{perl_vendorlib}/inc/Module/Install
+%{_mandir}/man3/Module::AutoInstall.3pm*
+%{_mandir}/man3/Module::Install*.3pm*
+%{_mandir}/man3/inc::Module::Install*.3pm*
