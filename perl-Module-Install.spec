@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Module
 %define	pnam	Install
 Summary:	Module::Install - Standalone, extensible Perl module installer
